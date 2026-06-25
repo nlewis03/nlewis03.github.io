@@ -2,10 +2,6 @@
 
 A CSE 400 (Human-Computer Interaction) class project documenting the design process for **SpeakBirth**, a mobile app concept that addresses the Black maternal mortality crisis in the United States by helping Black mothers find culturally competent providers, navigate insurance benefits, and read honest equity-focused reviews of hospitals.
 
-## Live website
-
-Once GitHub Pages is enabled, the site will be live at:
-`https://[your-github-username].github.io/[your-repo-name]/`
 
 ## Repository structure
 
@@ -21,19 +17,6 @@ Once GitHub Pages is enabled, the site will be live at:
 ├── images/                # Image assets (storyboards, prototype screenshots, etc.)
 └── README.md              # This file
 ```
-
-## How to run the website
-
-### Option 1: View locally
-1. Clone or download this repository.
-2. Open `index.html` in any modern web browser.
-3. Navigate between pages using the top navigation bar.
-
-### Option 2: View on GitHub Pages
-1. Push the repository to GitHub.
-2. Go to **Settings → Pages**.
-3. Under "Build and deployment," set Source to "Deploy from a branch" and Branch to `main` (or `master`), folder `/ (root)`.
-4. Save. Wait 1–2 minutes, then visit the URL shown.
 
 ## Section links
 
@@ -57,9 +40,5 @@ To add storyboard, prototype, or journey map images:
 
 ## Author
 
-[Your Name] — [SU ID]
-CSE 400, Fall 2025
-
-## Acknowledgments
-
-Research sources used in the design process include CDC and KFF maternal mortality data, a PMC qualitative study on obstetric racism, STAT News coverage of Black maternal health technology (including the Irth app), and a 2024 Women's Health journal study on mHealth perspectives among Black rural postpartum mothers.
+Nailah Lewis — nlewis03
+CSE 400, Summer 2026
