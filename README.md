@@ -1,4 +1,4 @@
-# SpeakBirth — HCI Design Portfolio
+# SpeakBirth: HCI Design Portfolio
 
 A CSE 400 (Human-Computer Interaction) class project documenting the design process for **SpeakBirth**, a mobile app concept that addresses the Black maternal mortality crisis in the United States by helping Black mothers find culturally competent providers, navigate insurance benefits, and read honest equity-focused reviews of hospitals.
 
