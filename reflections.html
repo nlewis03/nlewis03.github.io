@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflections — SpeakBirth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SpeakBirth</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="overview.html">Overview</a>
+        <a href="design-process.html">Design Process</a>
+        <a href="prototyping.html">Prototyping</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="reflections.html" class="active">Reflections</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>Reflections & Conclusion</h1>
+      <p>Lessons learned, what worked, what didn't, and where this goes next.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Lessons learned</div>
+      <h2>What I learned about HCI in practice</h2>
+      <p class="lead">The biggest takeaway from this project is that good design research doesn't just confirm your assumptions — it should challenge them. Some of the strongest design decisions in SpeakBirth came from moments where the evidence pointed somewhere different than where my intuition started.</p>
+
+      <h3>AI hypotheses are a starting point, not an answer</h3>
+      <p>The Needfinding AI Agent in Claude was useful for generating hypotheses quickly, but its suggestions were sometimes plausible-sounding and wrong. The agent leaned on demographic explanations (provider race, language barriers) where the real research pointed to behavioral ones (dismissal, trust). Comparing AI output against grounded sources in NotebookLM was the step that made the research feel rigorous rather than speculative.</p>
+
+      <h3>Structure beats narrative for sensitive topics</h3>
+      <p>Originally, the review feature was going to lean heavily on free-text storytelling — the assumption being that Black mothers wanted to share full narratives. The research showed something different: users <em>also</em> want structure, because structure makes the data scannable and actionable for the next person reading it. The yes/no equity rubric became the most distinctive feature of the app for exactly this reason.</p>
+
+      <h3>Designing for trust is different from designing for usability</h3>
+      <p>A lot of HCI heuristics are about reducing friction. But for a population with deeply rational reasons to distrust the medical system, sometimes <em>more</em> friction (verification, structure, transparency about how data is used) is what builds trust. Designing for SpeakBirth meant treating trust as a first-class design constraint, not a side effect of good usability.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">What worked</div>
+      <h2>Strengths of the process</h2>
+
+      <h3>Source-grounded research</h3>
+      <p>Forcing every finding to be backed by a real source (PMC qualitative study, CDC data, STAT News, Women's Health journal) meant the design rested on evidence rather than imagination. This was especially important for a project where I am not myself a member of the target user group.</p>
+
+      <h3>Iterating away from initial sketches</h3>
+      <p>The three early sketches all changed meaningfully by the time they became prototype screens. The "Black-owned" filter became "rated by Black patients." The long benefits form became a two-question quiz. The free-text review became a structured rubric. Each change was traceable to a specific research finding, which made the iteration feel earned.</p>
+
+      <h3>The heuristic evaluation surfaced real issues</h3>
+      <p>The rural empty state (H5) was a real blind spot that the evaluation caught. It would have been an embarrassing flaw in the app — a tool meant to serve rural Black mothers that returned zero results for them — and the evaluation flagged it before any user ever encountered it.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">What could be improved</div>
+      <h2>Limitations and next steps</h2>
+
+      <h3>No real user testing</h3>
+      <p>The project relied on secondary sources rather than direct interviews with Black mothers. The next phase of this work would involve actual user testing — semi-structured interviews paired with think-aloud sessions on the prototype — to validate whether the equity rubric and provider filters resonate with the people they're meant to serve.</p>
+
+      <h3>Postpartum coverage is thin</h3>
+      <p>Source A and Source D both highlighted that most maternal deaths happen postpartum, but the current prototype focuses more on the prenatal flow. A future version should include postpartum-specific features: symptom tracking, warning signs alerts, mental health check-ins, and direct lines to crisis support.</p>
+
+      <h3>Provider buy-in is unaddressed</h3>
+      <p>SpeakBirth's review system depends on providers being willing to be rated on equity dimensions. The current design doesn't address how providers might respond to negative reviews or whether they would push back on the platform. A real launch would need to consider provider relations as a design problem in its own right.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Conclusion</div>
+      <h2>How the prototype addresses user needs</h2>
+      <p>SpeakBirth is a response to a documented crisis. The maternal mortality disparity for Black women in the United States is one of the most preventable public health failures in the country, and information access is one of several leverage points where design can make a real contribution. The prototype directly addresses three needs that surfaced repeatedly in the research:</p>
+
+      <ul>
+        <li><strong>The need to find providers who treat Black patients well</strong> — addressed through the equity-focused provider filter and rubric-based reviews.</li>
+        <li><strong>The need to understand insurance benefits without phone calls</strong> — addressed through the two-question benefits navigator.</li>
+        <li><strong>The need to warn other Black mothers about unsafe care</strong> — addressed through the structured review system and verification flow.</li>
+      </ul>
+
+      <p>The heuristic evaluation strengthened the design by surfacing issues like the rural empty state and the missing draft save — issues that, left unaddressed, would have undermined exactly the users SpeakBirth was built for. The final design isn't perfect, but it is honest about its limits and grounded in real evidence about what would actually help.</p>
+
+      <p>If this project did anything well, it modeled the value of doing HCI work carefully on a topic that matters — treating real lives as a real design constraint, not just a slide-deck framing.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>SpeakBirth · CSE 400 design portfolio · [Your Name] · [SU ID]</p>
+      <p class="footer-sub">A class project documenting the design process from problem framing through prototype and evaluation.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

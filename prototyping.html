@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prototyping — SpeakBirth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SpeakBirth</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="overview.html">Overview</a>
+        <a href="design-process.html">Design Process</a>
+        <a href="prototyping.html" class="active">Prototyping</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="reflections.html">Reflections</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>Prototyping</h1>
+      <p>Tools, screens, and feedback from the prototype phase.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Tools used</div>
+      <h2>How the prototype was built</h2>
+      <p>The prototype was built as a set of high-fidelity static screens, designed to be screenshot-ready for both the report and presentation. The goal was to communicate functionality and visual hierarchy clearly enough that a non-designer could understand the flow without narration.</p>
+
+      <ul>
+        <li><strong>Figma</strong> — used for the final high-fidelity mockups, design system, and component library</li>
+        <li><strong>Paper sketches</strong> — used for early ideation and storyboard frames</li>
+        <li><strong>Visualizer (Claude)</strong> — used to produce mockup mid-fidelity screens for quick iteration</li>
+      </ul>
+
+      <h3>Design system</h3>
+      <p>The prototype uses a warm, neutral palette anchored by a coral-brown primary color, chosen to feel grounded and serious without being cold or clinical. Typography is Inter, weights 400 and 500 only, to keep the interface calm and legible. All components use 0.5–1px borders and generous whitespace to feel native to a modern mobile OS.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Screens</div>
+      <h2>The three core flows</h2>
+      <p>Each of the three core tasks is represented as a four-screen flow in the high-fidelity prototype. The screens are designed to be screenshot-ready for embedding in the report and presentation.</p>
+
+      <div class="storyboard-card">
+        <div class="storyboard-header">
+          <div class="storyboard-num">Flow 1</div>
+          <h3>Provider search and filtering</h3>
+        </div>
+        <p>Home → Filters → Results → Provider detail. The user enters their location, applies equity-focused filters, and lands on a provider profile with a clear breakdown of how that provider is rated by Black patients across three equity dimensions.</p>
+        <div class="image-placeholder">
+          <p>Insert provider search prototype screens</p>
+          <p class="placeholder-sub">Replace with: <code>&lt;img src="images/prototype-1.png" alt="Provider search prototype"&gt;</code></p>
+        </div>
+      </div>
+
+      <div class="storyboard-card">
+        <div class="storyboard-header">
+          <div class="storyboard-num">Flow 2</div>
+          <h3>Insurance benefits navigator</h3>
+        </div>
+        <p>Entry → Insurance type → Coverage results → Filtered providers. A two-question quiz surfaces the user's actual covered benefits, with a clear handoff to a pre-filtered list of providers who accept that coverage.</p>
+        <div class="image-placeholder">
+          <p>Insert benefits navigator prototype screens</p>
+          <p class="placeholder-sub">Replace with: <code>&lt;img src="images/prototype-2.png" alt="Benefits navigator prototype"&gt;</code></p>
+        </div>
+      </div>
+
+      <div class="storyboard-card">
+        <div class="storyboard-header">
+          <div class="storyboard-num">Flow 3</div>
+          <h3>Submitting and reading equity reviews</h3>
+        </div>
+        <p>Hospital profile → Filtered reviews → Review form → Confirmation. Reviews are submitted through a structured equity rubric and verified before posting. Other users can filter by care type, time period, and rating.</p>
+        <div class="image-placeholder">
+          <p>Insert equity review prototype screens</p>
+          <p class="placeholder-sub">Replace with: <code>&lt;img src="images/prototype-3.png" alt="Equity reviews prototype"&gt;</code></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Feedback</div>
+      <h2>What I heard during prototyping</h2>
+      <p>Feedback came from informal peer review and from re-checking the prototype against the original research findings. A few themes:</p>
+
+      <h3>Positive feedback</h3>
+      <ul>
+        <li>The equity rubric on reviews was praised as the strongest differentiator — it gives reviews a structure that Yelp or Google Maps reviews don't have.</li>
+        <li>The two-question benefits quiz was described as "the kind of thing that should already exist."</li>
+        <li>The provider profile's three-dimension equity breakdown (pain acknowledged, concerns heard, would recommend) was described as immediately useful.</li>
+      </ul>
+
+      <h3>Constructive feedback</h3>
+      <ul>
+        <li>The home screen needed a clearer entry point for first-time users — the "Find a provider" CTA was added in response.</li>
+        <li>Filter chips needed to show active states more clearly so users could see what was applied at a glance.</li>
+        <li>The review confirmation screen originally just said "Thanks" — feedback led to adding the user's impact (updated rating, total reviews) so submitting feels meaningful.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>SpeakBirth · CSE 400 design portfolio · [Your Name] · [SU ID]</p>
+      <p class="footer-sub">A class project documenting the design process from problem framing through prototype and evaluation.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

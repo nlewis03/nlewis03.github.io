@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Process — SpeakBirth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SpeakBirth</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="overview.html">Overview</a>
+        <a href="design-process.html" class="active">Design Process</a>
+        <a href="prototyping.html">Prototyping</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="reflections.html">Reflections</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>Design Process</h1>
+      <p>Research, personas, journey maps, storyboards, and iteration.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">User research</div>
+      <h2>What the sources actually showed</h2>
+      <p>I conducted source-grounded research using NotebookLM with four sources, paired with hypothesis generation from Claude's Needfinding AI Agent. Comparing the two surfaced where the AI agent's guesses matched the evidence — and where they didn't.</p>
+
+      <h3>Sources used</h3>
+      <ul>
+        <li><strong>Source A:</strong> CDC and KFF maternal mortality data (2023–2024)</li>
+        <li><strong>Source B:</strong> PMC qualitative study — interviews with 24 Black women on obstetric racism</li>
+        <li><strong>Source C:</strong> STAT News coverage of Black maternal health tech, including Irth</li>
+        <li><strong>Source D:</strong> Women's Health journal — mHealth perspectives from Black rural postpartum mothers</li>
+      </ul>
+
+      <h3>Six findings from the research</h3>
+      <div class="findings-grid">
+        <div class="finding">
+          <div class="finding-num">F1</div>
+          <div class="finding-content">
+            <div class="finding-title">Dismissal is the most consistent breakdown point</div>
+            <div class="finding-source">Sources B + D: Black women across income levels describe being dismissed and not believed.</div>
+          </div>
+        </div>
+        <div class="finding">
+          <div class="finding-num">F2</div>
+          <div class="finding-content">
+            <div class="finding-title">Nearly 1 in 3 Black women report mistreatment</div>
+            <div class="finding-source">Source A: CDC data shows 30% report being ignored or dismissed in maternity care.</div>
+          </div>
+        </div>
+        <div class="finding">
+          <div class="finding-num">F3</div>
+          <div class="finding-content">
+            <div class="finding-title">Peer networks are the trusted fallback</div>
+            <div class="finding-source">Source C: When providers fail, Black mothers turn to social media and peer reviews.</div>
+          </div>
+        </div>
+        <div class="finding">
+          <div class="finding-num">F4</div>
+          <div class="finding-content">
+            <div class="finding-title">Rural Black mothers face compounded barriers</div>
+            <div class="finding-source">Source D: Geographic isolation amplifies the effects of dismissal.</div>
+          </div>
+        </div>
+        <div class="finding">
+          <div class="finding-num">F5</div>
+          <div class="finding-content">
+            <div class="finding-title">Trust must be earned before functionality matters</div>
+            <div class="finding-source">Source C: Apps that center Black voices in design see higher adoption.</div>
+          </div>
+        </div>
+        <div class="finding">
+          <div class="finding-num">F6</div>
+          <div class="finding-content">
+            <div class="finding-title">Most maternal deaths happen postpartum</div>
+            <div class="finding-source">Source A: Majority of deaths occur between 1 week and 1 year after birth.</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>AI agent vs. NotebookLM comparison</h3>
+      <p>The Claude Needfinding Agent hypothesized that users primarily need to find Black providers and that language barriers were a key constraint. NotebookLM, grounded in real sources, showed something more nuanced.</p>
+      <div class="comparison">
+        <div class="comp-box">
+          <div class="comp-label">AI agent hypothesis</div>
+          <div class="comp-text">Users mainly need to find Black providers specifically. Language and literacy barriers are likely a key constraint.</div>
+        </div>
+        <div class="comp-box">
+          <div class="comp-label">NotebookLM evidence</div>
+          <div class="comp-text">Finding a Black provider matters, but provider <em>behavior</em> is the bigger issue. Language was not cited — trust was.</div>
+        </div>
+        <div class="comp-box">
+          <div class="comp-label">Comparison</div>
+          <div class="comp-text">Partially supported. The AI over-indexed on provider identity and under-indexed on how providers behave.</div>
+        </div>
+        <div class="comp-box">
+          <div class="comp-label">Design implication</div>
+          <div class="comp-text">Filters should emphasize "rated highly by Black patients" rather than just "Black-owned practice."</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Personas</div>
+      <h2>Who we're designing for</h2>
+      <p>Three personas, synthesized from the research, capture the range of contexts in which SpeakBirth would be used.</p>
+
+      <div class="persona-grid">
+        <div class="persona">
+          <div class="persona-avatar">TJ</div>
+          <div class="persona-name">Tanya Johnson</div>
+          <div class="persona-role">First-time, urban, Medicaid</div>
+          <div class="persona-detail"><strong>Age:</strong> 27 · Chicago, IL</div>
+          <div class="persona-detail"><strong>Context:</strong> 22 weeks pregnant. Felt dismissed at her first OB visit when her pain concerns were brushed off. Looking to switch providers but doesn't know how to find one she can trust.</div>
+          <div class="persona-detail"><strong>Goal:</strong> Find a midwife who takes Medicaid and has good reviews from other Black mothers.</div>
+        </div>
+        <div class="persona">
+          <div class="persona-avatar">MR</div>
+          <div class="persona-name">Maya Reed</div>
+          <div class="persona-role">Second-time, suburban, private insurance</div>
+          <div class="persona-detail"><strong>Age:</strong> 34 · Atlanta, GA</div>
+          <div class="persona-detail"><strong>Context:</strong> Wants to hire a doula for her second birth after a difficult first delivery. Her insurance portal is impossible to navigate and her HR rep gave her conflicting answers.</div>
+          <div class="persona-detail"><strong>Goal:</strong> Confirm her doula coverage and find a doula who takes her insurance.</div>
+        </div>
+        <div class="persona">
+          <div class="persona-avatar">JM</div>
+          <div class="persona-name">Jordan Miller</div>
+          <div class="persona-role">Postpartum, rural, recovering</div>
+          <div class="persona-detail"><strong>Age:</strong> 30 · Macon, GA</div>
+          <div class="persona-detail"><strong>Context:</strong> Six weeks postpartum after a near-miss when her blood pressure concerns were dismissed during labor. Wants to warn other mothers about the hospital and find a postpartum therapist.</div>
+          <div class="persona-detail"><strong>Goal:</strong> Submit a verified review of her hospital and access covered postpartum mental health support.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">User journey map</div>
+      <h2>The current vs. ideal path</h2>
+      <p>Tanya's journey today involves at least four separate tools, two phone calls, and several hours of work to switch providers. With SpeakBirth, the same journey could take under ten minutes.</p>
+
+      <h3>Current journey (without SpeakBirth)</h3>
+      <ol>
+        <li>Google "OB-GYN near me that takes Medicaid" — get a list of providers with no equity context</li>
+        <li>Call insurance to verify coverage — wait on hold for 25 minutes</li>
+        <li>Search Facebook groups for recommendations — get conflicting answers</li>
+        <li>Look up each provider on Yelp — reviews are about parking and bedside manner, not equity</li>
+        <li>Call each office to ask about availability — give up after the third busy signal</li>
+      </ol>
+
+      <h3>Ideal journey (with SpeakBirth)</h3>
+      <ol>
+        <li>Open SpeakBirth, enter location and insurance type</li>
+        <li>Apply equity filter — see providers rated highly by Black patients</li>
+        <li>Read structured equity reviews on top providers</li>
+        <li>Tap "Request appointment" with the highest-rated match</li>
+      </ol>
+
+      <div class="image-placeholder">
+        <p>Optional: insert a journey map diagram here</p>
+        <p class="placeholder-sub">Replace with: <code>&lt;img src="images/journey-map.png" alt="User journey map"&gt;</code></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Tasks</div>
+      <h2>Three core tasks</h2>
+      <p>Building on the research, three tasks emerged as essential. Each maps to one of the three design goals.</p>
+
+      <div class="task-list">
+        <div class="task">
+          <div class="task-num">Task 01</div>
+          <h3>Provider search and filtering</h3>
+          <p>The user enters their location and insurance type, then applies filters including equity rating, provider type, and distance. The app returns a sorted list of providers and the user can tap into any profile to see equity score breakdowns and individual reviews.</p>
+        </div>
+        <div class="task">
+          <div class="task-num">Task 02</div>
+          <h3>Insurance benefits navigator</h3>
+          <p>The user selects their insurance type and state. The app displays a clear summary of what they are covered for — doula reimbursement, postpartum mental health visits, lactation support — and links directly to a filtered provider list.</p>
+        </div>
+        <div class="task">
+          <div class="task-num">Task 03</div>
+          <h3>Submitting and reading equity reviews</h3>
+          <p>The user submits a review using a structured equity rubric (pain acknowledged, concerns heard, would recommend). Other users can filter reviews by date, care type, and rating.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Storyboards</div>
+      <h2>Storyboards for each task</h2>
+      <p>Each storyboard walks through the four key screens of its task, showing functionality without scenario narration.</p>
+
+      <div class="storyboard-card">
+        <div class="storyboard-header">
+          <div class="storyboard-num">Storyboard 1</div>
+          <h3>Provider search and filtering</h3>
+        </div>
+        <div class="storyboard-frames">
+          <div class="frame">
+            <div class="frame-label">Frame 1</div>
+            <div class="frame-text">Home screen with search bar and "Find a provider" button.</div>
+          </div>
+          <div class="frame">
+            <div class="frame-label">Frame 2</div>
+            <div class="frame-text">Filter screen with insurance type, provider type, distance, and equity toggle.</div>
+          </div>
+          <div class="frame">
+            <div class="frame-label">Frame 3</div>
+            <div class="frame-text">Results list showing providers sorted by equity rating.</div>
+          </div>
+          <div class="frame">
+            <div class="frame-label">Frame 4</div>
+            <div class="frame-text">Provider detail page with equity score breakdown and book button.</div>
+          </div>
+        </div>
+        <div class="image-placeholder">
+          <p>Insert Storyboard 1 image</p>
+          <p class="placeholder-sub">Replace with: <code>&lt;img src="images/storyboard-1.png" alt="Storyboard 1"&gt;</code></p>
+        </div>
+      </div>
+
+      <div class="storyboard-card">
+        <div class="storyboard-header">
+          <div class="storyboard-num">Storyboard 2</div>
+          <h3>Insurance benefits navigator</h3>
+        </div>
+        <div class="storyboard-frames">
+          <div class="frame">
+            <div class="frame-label">Frame 1</div>
+            <div class="frame-text">Benefits entry point with "Find your coverage" CTA.</div>
+          </div>
+          <div class="frame">
+            <div class="frame-label">Frame 2</div>
+            <div class="frame-text">Two-step menu — select insurance type, then state.</div>
+          </div>
+          <div class="frame">
+            <div class="frame-label">Frame 3</div>
+            <div class="frame-text">Coverage results card showing what's covered and how much.</div>
+          </div>
+          <div class="frame">
+            <div class="frame-label">Frame 4</div>
+            <div class="frame-text">Pre-filtered provider list of doulas who accept that coverage.</div>
+          </div>
+        </div>
+        <div class="image-placeholder">
+          <p>Insert Storyboard 2 image</p>
+          <p class="placeholder-sub">Replace with: <code>&lt;img src="images/storyboard-2.png" alt="Storyboard 2"&gt;</code></p>
+        </div>
+      </div>
+
+      <div class="storyboard-card">
+        <div class="storyboard-header">
+          <div class="storyboard-num">Storyboard 3</div>
+          <h3>Submitting and reading equity reviews</h3>
+        </div>
+        <div class="storyboard-frames">
+          <div class="frame">
+            <div class="frame-label">Frame 1</div>
+            <div class="frame-text">Hospital profile with equity rating and recent reviews.</div>
+          </div>
+          <div class="frame">
+            <div class="frame-label">Frame 2</div>
+            <div class="frame-text">Filter options for care type, time period, and rating.</div>
+          </div>
+          <div class="frame">
+            <div class="frame-label">Frame 3</div>
+            <div class="frame-text">Review submission form with equity rubric and text box.</div>
+          </div>
+          <div class="frame">
+            <div class="frame-label">Frame 4</div>
+            <div class="frame-text">Confirmation screen showing the review is live.</div>
+          </div>
+        </div>
+        <div class="image-placeholder">
+          <p>Insert Storyboard 3 image</p>
+          <p class="placeholder-sub">Replace with: <code>&lt;img src="images/storyboard-3.png" alt="Storyboard 3"&gt;</code></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Design iterations</div>
+      <h2>What changed, and why</h2>
+      <p>The early sketches and the final prototype look meaningfully different. A few key shifts:</p>
+
+      <h3>From "Black-owned" to "rated by Black patients"</h3>
+      <p>The first sketch of the provider filter included a toggle for "Black-owned practice." Research showed this was the wrong frame — what mothers actually need is to know whether providers <em>treat</em> Black patients well, regardless of the provider's own identity. The filter was reworked to surface equity rating instead.</p>
+
+      <h3>From a long form to a two-question quiz</h3>
+      <p>The first version of the benefits navigator asked users to enter their plan name, group number, and state. Sources showed that most users don't know this information off the top of their head. The flow was simplified to two questions: insurance type and state. Result: a one-minute task instead of a five-minute one.</p>
+
+      <h3>From free-text reviews to a structured rubric</h3>
+      <p>Originally, reviews were going to be a single text field. Research surfaced that the missing feature in existing tools is <em>structured</em> equity data — clear yes/no answers to whether pain was acknowledged, whether concerns were heard, whether the user would recommend the provider to other Black patients. The rubric was added so reviews are useful at a glance, not just in detail.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>SpeakBirth · CSE 400 design portfolio · [Your Name] · [SU ID]</p>
+      <p class="footer-sub">A class project documenting the design process from problem framing through prototype and evaluation.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

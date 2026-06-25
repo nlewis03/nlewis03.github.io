@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heuristic Evaluation — SpeakBirth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SpeakBirth</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="overview.html">Overview</a>
+        <a href="design-process.html">Design Process</a>
+        <a href="prototyping.html">Prototyping</a>
+        <a href="evaluation.html" class="active">Evaluation</a>
+        <a href="reflections.html">Reflections</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>Heuristic Evaluation</h1>
+      <p>Nielsen's 10 usability heuristics applied to the SpeakBirth prototype.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Method</div>
+      <h2>How the evaluation was conducted</h2>
+      <p>The SpeakBirth prototype was evaluated against Jakob Nielsen's 10 Usability Heuristics. Each of the three core flows — provider search, benefits navigator, and equity reviews — was walked through screen by screen, with usability issues flagged and rated for severity on a three-point scale:</p>
+      <ul>
+        <li><strong>Low</strong> — cosmetic problem; doesn't block the user</li>
+        <li><strong>Medium</strong> — usability issue worth fixing in the next iteration</li>
+        <li><strong>High</strong> — major problem that blocks core task completion or harms trust</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Findings</div>
+      <h2>Identified issues</h2>
+      <p>Six usability issues surfaced across the three flows. Each is mapped to a Nielsen heuristic and paired with a suggested fix.</p>
+
+      <div class="heuristic-list">
+
+        <div class="heuristic">
+          <div class="heuristic-header">
+            <span class="heuristic-num">H1</span>
+            <span class="heuristic-title">Visibility of system status</span>
+            <span class="severity severity-med">Medium</span>
+          </div>
+          <div class="heuristic-body">When the user submits a review, there is no loading indicator between tapping "Submit" and seeing the confirmation screen. On a slow connection, the user may tap twice and submit duplicate reviews.</div>
+          <div class="heuristic-fix"><strong>Suggested fix:</strong> Add a loading spinner on the submit button with the label "Posting…" and disable the button until the response returns.</div>
+        </div>
+
+        <div class="heuristic">
+          <div class="heuristic-header">
+            <span class="heuristic-num">H2</span>
+            <span class="heuristic-title">Match between system and the real world</span>
+            <span class="severity severity-low">Low</span>
+          </div>
+          <div class="heuristic-body">The benefits navigator uses the term "ACA" without explanation. Users unfamiliar with the acronym may not know whether to select it.</div>
+          <div class="heuristic-fix"><strong>Suggested fix:</strong> Use the full phrase "Marketplace (Affordable Care Act)" or add a small info icon that explains the term in plain language.</div>
+        </div>
+
+        <div class="heuristic">
+          <div class="heuristic-header">
+            <span class="heuristic-num">H3</span>
+            <span class="heuristic-title">User control and freedom</span>
+            <span class="severity severity-med">Medium</span>
+          </div>
+          <div class="heuristic-body">On the review submission form, there is no "Save as draft" option. A user writing a long, emotional story about a traumatic birth experience could lose their progress if they navigate away.</div>
+          <div class="heuristic-fix"><strong>Suggested fix:</strong> Add auto-save behavior on the text field and surface a "Save draft" button. Show a clear confirmation prompt if the user tries to exit without saving.</div>
+        </div>
+
+        <div class="heuristic">
+          <div class="heuristic-header">
+            <span class="heuristic-num">H5</span>
+            <span class="heuristic-title">Error prevention</span>
+            <span class="severity severity-high">High</span>
+          </div>
+          <div class="heuristic-body">The provider search defaults to a 10-mile radius. In rural areas, this may return zero results, leaving the user feeling like there are no providers near them at all — when really, the radius needs adjusting.</div>
+          <div class="heuristic-fix"><strong>Suggested fix:</strong> When results are zero, surface a clear empty state with a button to expand the search radius automatically. Default to a wider radius for users whose zip codes fall in rural areas.</div>
+        </div>
+
+        <div class="heuristic">
+          <div class="heuristic-header">
+            <span class="heuristic-num">H6</span>
+            <span class="heuristic-title">Recognition rather than recall</span>
+            <span class="severity severity-low">Low</span>
+          </div>
+          <div class="heuristic-body">The active state on filter chips is visually subtle. A user who applies a filter on the previous screen may forget it's active when they return to the results.</div>
+          <div class="heuristic-fix"><strong>Suggested fix:</strong> Add a small badge to the filter icon on the results screen showing the count of active filters (e.g., "3 active").</div>
+        </div>
+
+        <div class="heuristic">
+          <div class="heuristic-header">
+            <span class="heuristic-num">H10</span>
+            <span class="heuristic-title">Help and documentation</span>
+            <span class="severity severity-med">Medium</span>
+          </div>
+          <div class="heuristic-body">First-time users may not understand what "equity rating" means or how it differs from a regular star rating. There is no in-app explanation.</div>
+          <div class="heuristic-fix"><strong>Suggested fix:</strong> Add a one-time tooltip on the equity rating that explains what it measures, with a "Learn more" link to a longer explanation of the rubric.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Revisions</div>
+      <h2>Design changes based on evaluation</h2>
+      <p>The two highest-impact issues — the rural empty state (H5) and the missing draft save (H3) — were prioritized for revision in the next iteration of the prototype. The empty state fix is particularly important because rural Black mothers are a target user group, and a zero-results experience could push them out of the app entirely.</p>
+
+      <div class="image-placeholder">
+        <p>Optional: insert before/after screenshots of the empty state fix</p>
+        <p class="placeholder-sub">Replace with: <code>&lt;img src="images/empty-state-fix.png" alt="Before and after the rural empty state fix"&gt;</code></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>SpeakBirth · CSE 400 design portfolio · [Your Name] · [SU ID]</p>
+      <p class="footer-sub">A class project documenting the design process from problem framing through prototype and evaluation.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
