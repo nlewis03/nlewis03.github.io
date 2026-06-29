@@ -36,11 +36,13 @@
     <div class="container">
       <div class="section-label">Method</div>
       <h2>How the evaluation was conducted</h2>
-      <p>The SpeakBirth prototype was evaluated against Jakob Nielsen's 10 Usability Heuristics. Each of the three core flows — provider search, benefits navigator, and equity reviews — was walked through screen by screen, with usability issues flagged and rated for severity on a three-point scale:</p>
+      <p>The SpeakBirth prototype was evaluated against Jakob Nielsen's 10 Usability Heuristics. Each of the three core tasks: provider search, benefits navigator, and equity reviews; were walked through screen by screen, with usability issues flagged and rated for severity on a four-point scale:</p>
       <ul>
-        <li><strong>Low</strong> — cosmetic problem; doesn't block the user</li>
-        <li><strong>Medium</strong> — usability issue worth fixing in the next iteration</li>
-        <li><strong>High</strong> — major problem that blocks core task completion or harms trust</li>
+        <li><strong>0</strong> : no issue</li>
+        <li><strong>1</strong> : cosmetic problem; doesn't block the user</li>
+        <li><strong>2</strong> : usability issue worth fixing in the next iteration</li>
+        <li><strong>3</strong> : in between 2 and 4</li>
+        <li><strong>4</strong> : major problem that blocks core task completion or harms trust</li>
       </ul>
     </div>
   </section>
@@ -57,7 +59,7 @@
           <div class="heuristic-header">
             <span class="heuristic-num">H1</span>
             <span class="heuristic-title">Visibility of system status</span>
-            <span class="severity severity-med">Medium</span>
+            <span class="severity severity-med">2</span>
           </div>
           <div class="heuristic-body">In Storyboard 3 there's no progress indication at all on the review form. Also, in Storyboard 1, the active filters aren't visible so the user has to remember what they selected.</div>
         </div>
@@ -66,7 +68,7 @@
           <div class="heuristic-header">
             <span class="heuristic-num">H2</span>
             <span class="heuristic-title">Match between system and the real world</span>
-            <span class="severity severity-low">Low</span>
+            <span class="severity severity-low">1</span>
           </div>
           <div class="heuristic-body">"Equity rating" appears as a label with a score next to it, but a first-time user has no immediate way of knowing what that means or what scale it's on.
 </div>
@@ -76,7 +78,7 @@
           <div class="heuristic-header">
             <span class="heuristic-num">H3</span>
             <span class="heuristic-title">User control and freedom</span>
-            <span class="severity severity-med">Medium</span>
+            <span class="severity severity-med">2</span>
           </div>
           <div class="heuristic-body">On the review submission form, there is no "Save as draft" option. A user writing a long, emotional story about a traumatic birth experience could lose their progress if they navigate away.</div>
         </div>
@@ -85,7 +87,7 @@
           <div class="heuristic-header">
             <span class="heuristic-num">H5</span>
             <span class="heuristic-title">Error prevention</span>
-            <span class="severity severity-high">High</span>
+            <span class="severity severity-high">4</span>
           </div>
           <div class="heuristic-body">The review submission form in Storyboard 3, Frame 2 has no obvious way to cancel or save a draft. The only top-bar option is an "X" to close, which would presumably discard whatever the user has written. </div>
         </div>
@@ -96,7 +98,7 @@
     <div class="container">
       <div class="section-label">Revisions</div>
       <h2>Design changes based on evaluation</h2>
-      <p>The two highest-impact issues — the rural empty state (H5) and the missing draft save (H3) — were prioritized for revision in the next iteration of the prototype. The empty state fix is particularly important because rural Black mothers are a target user group, and a zero-results experience could push them out of the app entirely.</p>
+      <p>The two highest-impact issues; the rural empty state (H5) and the missing draft save (H3) — were prioritized for revision in the next iteration of the prototype. The empty state fix is particularly important because rural Black mothers are a target user group, and a zero-results experience could push them out of the app entirely.</p>
 
       <div class="image-placeholder">
         <p>Optional: insert before/after screenshots of the empty state fix</p>
