@@ -49,7 +49,7 @@
     <div class="container">
       <div class="section-label">Findings</div>
       <h2>Identified issues</h2>
-      <p>Six usability issues surfaced across the three flows. Each is mapped to a Nielsen heuristic and paired with a suggested fix.</p>
+      <p>Four usability issues surfaced across the three flows. Each is mapped to a Nielsen heuristic and paired with a suggested fix.</p>
 
       <div class="heuristic-list">
 
@@ -59,8 +59,7 @@
             <span class="heuristic-title">Visibility of system status</span>
             <span class="severity severity-med">Medium</span>
           </div>
-          <div class="heuristic-body">When the user submits a review, there is no loading indicator between tapping "Submit" and seeing the confirmation screen. On a slow connection, the user may tap twice and submit duplicate reviews.</div>
-          <div class="heuristic-fix"><strong>Suggested fix:</strong> Add a loading spinner on the submit button with the label "Posting…" and disable the button until the response returns.</div>
+          <div class="heuristic-body">In Storyboard 3 there's no progress indication at all on the review form. Also, in Storyboard 1, the active filters aren't visible so the user has to remember what they selected.</div>
         </div>
 
         <div class="heuristic">
@@ -69,8 +68,8 @@
             <span class="heuristic-title">Match between system and the real world</span>
             <span class="severity severity-low">Low</span>
           </div>
-          <div class="heuristic-body">The benefits navigator uses the term "ACA" without explanation. Users unfamiliar with the acronym may not know whether to select it.</div>
-          <div class="heuristic-fix"><strong>Suggested fix:</strong> Use the full phrase "Marketplace (Affordable Care Act)" or add a small info icon that explains the term in plain language.</div>
+          <div class="heuristic-body">"Equity rating" appears as a label with a score next to it, but a first-time user has no immediate way of knowing what that means or what scale it's on.
+</div>
         </div>
 
         <div class="heuristic">
@@ -80,7 +79,6 @@
             <span class="severity severity-med">Medium</span>
           </div>
           <div class="heuristic-body">On the review submission form, there is no "Save as draft" option. A user writing a long, emotional story about a traumatic birth experience could lose their progress if they navigate away.</div>
-          <div class="heuristic-fix"><strong>Suggested fix:</strong> Add auto-save behavior on the text field and surface a "Save draft" button. Show a clear confirmation prompt if the user tries to exit without saving.</div>
         </div>
 
         <div class="heuristic">
@@ -89,8 +87,7 @@
             <span class="heuristic-title">Error prevention</span>
             <span class="severity severity-high">High</span>
           </div>
-          <div class="heuristic-body">The provider search defaults to a 10-mile radius. In rural areas, this may return zero results, leaving the user feeling like there are no providers near them at all — when really, the radius needs adjusting.</div>
-          <div class="heuristic-fix"><strong>Suggested fix:</strong> When results are zero, surface a clear empty state with a button to expand the search radius automatically. Default to a wider radius for users whose zip codes fall in rural areas.</div>
+          <div class="heuristic-body">The review submission form in Storyboard 3, Frame 2 has no obvious way to cancel or save a draft. The only top-bar option is an "X" to close, which would presumably discard whatever the user has written. </div>
         </div>
          </div>
   </section>
